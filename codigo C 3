@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <string.h>
+
+//Strings
+int main(){
+	
+	setlocale(LC_ALL, "Portuguese");
+	
+	char name[10];
+    char word[10];
+	
+	printf("Digite seu nome: ");
+	scanf("%s", &name); // "%c" CARACTER e "&" é o endereço da memória variavel
+	
+	printf("Digite uma palavra: ");
+	scanf("%s", &word); // %s STRING
+	
+	printf("O nome é: %s\n", name);
+	printf("A palavra é: %s\n", word);
+	
+	strcpy(word, name); // Variavel de destino vai receber o conteudo da variavel de origem
+		
+	printf("A letra é: %s\n",  name);
+	printf("A palavra é: %s\n", word);
+	
+	system("pause");
+	return 0;
+}
